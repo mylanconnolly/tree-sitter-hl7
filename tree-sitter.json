@@ -1,0 +1,16 @@
+{
+  "grammars": [
+    {
+      "name": "hl7",
+      "camelcase": "HL7",
+      "scope": "source.hl7",
+      "path": ".",
+      "file-types": ["hl7"],
+      "highlights": ["queries/highlights.scm"]
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "description": "HL7 v2 (pipe-delimited) grammar for tree-sitter"
+  }
+}

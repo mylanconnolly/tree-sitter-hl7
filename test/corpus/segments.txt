@@ -1,0 +1,93 @@
+================================================================================
+Header and segments
+================================================================================
+MSH|^~\&|LAB|HOSP
+PID|1||123^^^H&1.2~456||DOE^JOHN
+--------------------------------------------------------------------------------
+
+(document
+  (header
+    (segment_name)
+    (field_separator)
+    (encoding_characters)
+    (field_separator)
+    (text)
+    (field_separator)
+    (text))
+  (segment
+    (segment_name)
+    (field_separator)
+    (text)
+    (field_separator)
+    (text)
+    (component_separator)
+    (text)
+    (subcomponent_separator)
+    (text)
+    (repetition_separator)
+    (text)
+    (field_separator)
+    (text)
+    (component_separator)
+    (text)))
+
+================================================================================
+Segment names inside data are text
+================================================================================
+PID|MSH|OBX^PID
+--------------------------------------------------------------------------------
+
+(document
+  (segment
+    (segment_name)
+    (field_separator)
+    (text)
+    (field_separator)
+    (text)
+    (component_separator)
+    (text)))
+
+================================================================================
+Escape sequences and a lone backslash
+================================================================================
+OBX|1|TX|a\F\b\.br\c|x \ y
+--------------------------------------------------------------------------------
+
+(document
+  (segment
+    (segment_name)
+    (field_separator)
+    (text)
+    (field_separator)
+    (text)
+    (field_separator)
+    (text)
+    (escape_sequence)
+    (text)
+    (escape_sequence)
+    (text)
+    (field_separator)
+    (text)
+    (text)
+    (text)))
+
+================================================================================
+Blank lines and a trailing separator
+================================================================================
+
+PID|1|
+
+ZPI|x|
+--------------------------------------------------------------------------------
+
+(document
+  (segment
+    (segment_name)
+    (field_separator)
+    (text)
+    (field_separator))
+  (segment
+    (segment_name)
+    (field_separator)
+    (text)
+    (field_separator)))
