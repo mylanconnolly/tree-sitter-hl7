@@ -50,3 +50,7 @@ tree-sitter test
 
 `src/` is generated and committed so the grammar can be compiled without
 the tree-sitter CLI.
+
+## License
+
+MIT. See `LICENSE`.

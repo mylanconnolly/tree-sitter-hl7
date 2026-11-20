@@ -1,5 +1,6 @@
 /**
  * @file HL7 v2 (pipe-delimited) grammar for tree-sitter
+ * @license MIT
  */
 
 /// <reference types="tree-sitter-cli/dsl" />
